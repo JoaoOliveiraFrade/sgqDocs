@@ -1,0 +1,20 @@
+Major Version: 
+É uma versão nova "efetivamente", ou seja, 
+suas características foram definidas em projeto como pertencentes a um projeto totalmente novo;
+(diretamente relacionado ao projeto; novo projeto, novo número)
+
+Minor Version: 
+É, a grosso modo, uma versão nova criada sobre uma versão anterior do software, 
+muitas vezes contemplando alterações que estavam previstas para a versão oficial mas, 
+por motivos diversos, não foram incluídas;
+(diretamente relacionado as entregas das funcionalidades do projeto, a cada nova entrega, novo número)
+
+Release: 
+É o número de lançamento do programa, ou seja, toda vez que você lança uma versão que considera "final", 
+e que não é uma alteração na versão principal (major version) nem na versão secundária (minor version). 
+A primeira começa no zero.
+(diretamente relacionado a ajustes e correções de bugs. a cada novo build publicado)
+
+Build: 
+É o número da compilação com a qual a release foi liberada. 
+Esse número começa no zero assim que a release foi lançada 
