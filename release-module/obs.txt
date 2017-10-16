@@ -1,0 +1,15 @@
+
+
+-sistema principal
+-desensolvimento
+-teste
+
+-soa (integração)
+
+
+projetoXrelease
+============================================
+-criar atributo (proj / sistema usa ambiente padrao?)
+-projetos com merge com apenas um sistema
+
+-simulacao para setembro

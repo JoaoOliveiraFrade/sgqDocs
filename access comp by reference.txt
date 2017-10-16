@@ -1,0 +1,50 @@
+// userform 
+// -------------------------------
+<script>
+export default {
+    name: "userform",
+    data(){
+        return {
+            login: 'blabla',
+            password: ''
+        }
+    }
+}
+</script>
+
+<template>
+    <section>
+        <input v-model="login">
+        <input v-model="password" type="password">
+    </section>
+</template>
+
+// Login
+// -------------------------------
+<script>
+
+import userform from './../../forms/userform.vue'
+
+export default {
+    name: "login",
+    components: {userform},
+    methods: {
+        sendLogin() {
+            console.log( "Usuario " +  this.$refs.meuForm.login )
+            console.log( "Senha " + this.$refs.meuForm.password )
+        }
+    }
+}
+</script>
+
+<template>
+    <section class="col-md-4 col-md-offset-4">
+
+        <userform ref='meuForm'></userform>
+        <button @click="sendLogin()">
+            Logar
+        </button>
+
+    </section>
+</template>
+

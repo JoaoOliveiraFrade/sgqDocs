@@ -1,0 +1,5 @@
+Soma do tempo do status "In_progress" até "Migrate" com o tempo da situação "Reopen" até "Migrate" (inclui todas as ocorrências de reteste). Contabiliza sempre que o sistema que possui o erro for um sistema do fornecedor (valor do campo "Agente Solucionador" do Defeito).
+
+Serão considerados os defeitos referentes às etapas de TI, TRG, UAT.
+
+A meta do indicador é por criticidade: Alta (4 horas); Média (8 horas); e Baixa (16 horas) – atender estes prazos em, no mínimo, 80% dos defeitos.

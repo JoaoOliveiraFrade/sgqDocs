@@ -1,0 +1,92 @@
+Select
+    Case WHEN (Select Torre from SGQ_Sistemas_Arquitetura sa where sa.Nome = (Select Sistema from ALM_Agentes a where a.Encaminhado_Para = dt.Encaminhado_Para)) = '1'
+         THEN 'TORRE I' 
+         WHEN (Select Torre from SGQ_Sistemas_Arquitetura sa where sa.Nome = (Select Sistema from ALM_Agentes a where a.Encaminhado_Para = dt.Encaminhado_Para)) = '2'
+         THEN 'TORRE II'
+         WHEN (Select Torre from SGQ_Sistemas_Arquitetura sa where sa.Nome = (Select Sistema from ALM_Agentes a where a.Encaminhado_Para = dt.Encaminhado_Para)) = '3'
+         THEN 'TORRE III'
+         WHEN (Select Torre from SGQ_Sistemas_Arquitetura sa where sa.Nome = (Select Sistema from ALM_Agentes a where a.Encaminhado_Para = dt.Encaminhado_Para)) = '4'
+         THEN 'TORRE IV' 
+         WHEN (Select Torre from SGQ_Sistemas_Arquitetura sa where sa.Nome = (Select Sistema from ALM_Agentes a where a.Encaminhado_Para = dt.Encaminhado_Para)) = '5'
+         THEN 'TORRE V' 
+         WHEN (Select Torre from SGQ_Sistemas_Arquitetura sa where sa.Nome = (Select Sistema from ALM_Agentes a where a.Encaminhado_Para = dt.Encaminhado_Para)) = '6'
+         THEN 'TORRE VI'
+         WHEN (Select Torre from SGQ_Sistemas_Arquitetura sa where sa.Nome = (Select Sistema from ALM_Agentes a where a.Encaminhado_Para = dt.Encaminhado_Para)) = '7'
+         THEN 'TORRE VII'
+         ELSE 'SEM TORRE' 
+	END as Torre,      
+	Case When (Select Sistema from ALM_Agentes a where a.Encaminhado_Para = dt.Encaminhado_Para) <> ''
+	     Then (Select Sistema from ALM_Agentes a where a.Encaminhado_Para = dt.Encaminhado_Para)
+		 Else dt.Encaminhado_Para
+    End as Sistema_Encaminhado_Para, 
+	(Select Sistema_Defeito from ALM_Defeitos d where d.Subprojeto = dt.Subprojeto and d.Entrega = dt.Entrega and d.Defeito = dt.Defeito) as Sistema_Defeito,
+	bs.Id + '|' + be.Id as Id_Tableau,
+	bs.Sti as Id_Sti,
+	bs.Id as Id_Subprojeto,
+	be.Id as Id_Entrega,
+	'' as Data_Producao,
+	'01-06-2017' as Data_Apuracao,
+	(Select Severidade from ALM_Defeitos d where d.Subprojeto = dt.Subprojeto and d.Entrega = dt.Entrega and d.Defeito = dt.Defeito) as Severidade,
+	(Select SLA from ALM_Defeitos d where d.Subprojeto = dt.Subprojeto and d.Entrega = dt.Entrega and d.Defeito = dt.Defeito) as SLA,
+	dt.Defeito,
+	dt.Encaminhado_Para as Agente,
+	dt.Status as Agente_Status,
+	Case When dt.Status = 'PENDENT (PROGRESS)'
+	     Then (Select Motivo_Pendencia from ALM_Defeitos d where d.Subprojeto = dt.Subprojeto and d.Entrega = dt.Entrega and d.Defeito = dt.Defeito) 
+		 Else ' '
+	End as Motivo_Pendencia,	  
+	dt.Operador as Id_Agente,
+	(Select Fornecedor from ALM_Usuarios u where u.login = dt.Operador) as Fornecedor_Operador,
+    Isnull((Select Nome from Empresas e where e.id = (Select Fabrica_Desenvolvimento from SGQ_Sistemas_Arquitetura s where s.Nome = (Select Sistema from ALM_Agentes a where a.Encaminhado_Para = dt.Encaminhado_Para))), '') as Fornecedor_Sistema,
+	Tempo_Util as Tempo_Util_Min,
+	(Select Ciclo from ALM_Defeitos d where d.Subprojeto = dt.Subprojeto and d.Entrega = dt.Entrega and d.Defeito = dt.Defeito) as Etapa,
+	(Select Encaminhado_Para from ALM_Defeitos d where d.Subprojeto = dt.Subprojeto and d.Entrega = dt.Entrega and d.Defeito = dt.Defeito) as Agente_Fecho_Defeito,
+	(Select Origem from ALM_Defeitos d where d.Subprojeto = dt.Subprojeto and d.Entrega = dt.Entrega and d.Defeito = dt.Defeito) as Origem,
+	(Select Natureza from ALM_Defeitos d where d.Subprojeto = dt.Subprojeto and d.Entrega = dt.Entrega and d.Defeito = dt.Defeito) as Natureza,
+    stuff ( 
+            (
+             SELECT Encaminhado_Para + '|' 
+               FROM ALM_Defeitos_Tempos dt2 
+              WHERE dt2.subprojeto = dt.subprojeto and dt2.entrega = dt.entrega and dt2.defeito = dt.defeito and
+				    dt2.status in ('IN_PROGRESS', 'PENDENT (PROGRESS)', 'REOPEN')
+			  Group by Encaminhado_Para
+              FOR XML PATH('')
+               ),1,0,''
+             ) AS 'Agentes_Tramitação',
+	Case When (Select CT from ALM_Defeitos d where d.Subprojeto = dt.Subprojeto and d.Entrega = dt.Entrega and d.Defeito = dt.Defeito) <> 0 
+	     Then convert(varchar(10), (Select CT from ALM_Defeitos d where d.Subprojeto = dt.Subprojeto and d.Entrega = dt.Entrega and d.Defeito = dt.Defeito)) 
+		 else Convert(varchar(10), 'Avulso')
+	End as CT,
+	'N' as Expurgo,
+	'' as Descricao_Expurgo,
+	15 as Indicador,
+	getdate() as DATA_EXTRACAO
+  From
+	BITI_Entregas be 
+	left join BITI_Subprojetos bs 
+	on bs.Id = be.Subprojeto
+	left join ALM_Defeitos_Tempos dt
+	on dt.Entrega = be.Id and dt.Subprojeto = bs.Id
+ Where
+	be.Id in (
+					'ENTREGA00003671',
+					'ENTREGA00004018',
+					'ENTREGA00004563',
+					'ENTREGA00004678',
+					'ENTREGA00004975',
+					'ENTREGA00005138',
+					'ENTREGA00005423',
+					'ENTREGA00005571',
+					'ENTREGA00006407',
+					'ENTREGA00006561')
+
+and dt.status in ('IN_PROGRESS', 'PENDENT (PROGRESS)', 'REOPEN')
+and (select Status_Atual from ALM_Defeitos d where d.Subprojeto = dt.Subprojeto and d.Entrega = dt.Entrega and d.Defeito = dt.Defeito) = 'Closed'
+and (select Origem from ALM_Defeitos d where d.Subprojeto = dt.Subprojeto and d.Entrega = dt.Entrega and d.Defeito = dt.Defeito) like '%Construção%'
+and (
+	  (Select Ciclo from ALM_Defeitos d where d.Subprojeto = dt.Subprojeto and d.Entrega = dt.Entrega and d.Defeito = dt.Defeito) like '%TI%' or 
+	  (Select Ciclo from ALM_Defeitos d where d.Subprojeto = dt.Subprojeto and d.Entrega = dt.Entrega and d.Defeito = dt.Defeito) like '%UAT%' or  
+	  (Select Ciclo from ALM_Defeitos d where d.Subprojeto = dt.Subprojeto and d.Entrega = dt.Entrega and d.Defeito = dt.Defeito) like '%TRG%' or   
+	  (Select Ciclo from ALM_Defeitos d where d.Subprojeto = dt.Subprojeto and d.Entrega = dt.Entrega and d.Defeito = dt.Defeito) like '%DEV%'  
+    )
+Order by be.Id, bs.Id, bs.Sti, dt.Defeito

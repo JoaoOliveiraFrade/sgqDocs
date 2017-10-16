@@ -1,0 +1,37 @@
+DESENVOLVIMENTO
+
+ - densidade
+ - tempo médio
+ - class errada (criar tela de cadastro)
+ - detect. em desenv.
+ - reabertos
+ - sem prev. solucao
+
+
+TESTE
+
+ - produtividade - OK
+   
+   1).produtividade ou taxa de produtividade?
+
+   2).Regra: total de execuções com status PASSED ou FAILED?
+  
+
+ - tx. rejeição evidencias - OK
+
+ - tx. defeitos improcedentes - OK
+
+ - tx. defeitos uat - OK
+
+ - tempo médio re-teste - OK
+
+ - densidade carga repositorio
+
+
+Dúvidas: 
+
+1).Visão por TI, UAT e Consolidado será somente para Tx. Rejeição?
+
+2).Os defeitos avulsos (sem associação com CTs), 
+   deverão ser considerado em cálculos globais (sem detalhamento)?
+

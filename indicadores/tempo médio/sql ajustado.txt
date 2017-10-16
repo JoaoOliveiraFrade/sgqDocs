@@ -1,0 +1,56 @@
+select 
+      *,    
+      case when Severidade = '3-HIGH' and  Tempo_Util_Min > 240 or Severidade = '2-MEDIUM' and  Tempo_Util_Min > 480 or Severidade = '1-LOW' and  Tempo_Util_Min > 960
+            then 'Estouro do SLA'
+            else 'Atendimento no Prazo'  
+      end as Situação_SLA
+from
+      (     
+            select  
+                  Id_Subprojeto,
+                  Id_Entrega,
+                  Defeito,   
+                  Agente,    
+                  Severidade,
+                  Natureza,
+                  sum(Tempo_Util_Min) as Tempo_Util_Min,
+                  cast (sum(Tempo_Util_Min) / 60 as varchar) + ':' + cast (sum(Tempo_Util_Min) - ((sum(Tempo_Util_Min) / 60) * 60) as varchar) as Tempo_Util_Horas,
+                  cast (sum(Tempo_Util_Min) / 1440 as varchar) as Tempo_Util_Dias
+            from
+                  (     
+                        Select
+                            bs.Id as Id_Subprojeto,
+                             be.Id as Id_Entrega,
+                             dt.Defeito,   
+                             dt.Encaminhado_Para as Agente,    
+                             (Select SLA from ALM_Defeitos d where d.Subprojeto = dt.Subprojeto and d.Entrega = dt.Entrega and d.Defeito = dt.Defeito) as SLA,
+                  
+                             d.Severidade,
+                             d.Natureza,
+                             dt.Tempo_Util as Tempo_Util_Min
+                        From
+                             BITI_Entregas be 
+                             left join BITI_Subprojetos bs 
+                             on bs.Id = be.Subprojeto
+                             left join ALM_Defeitos_Tempos dt
+                             on dt.Entrega = be.Id and dt.Subprojeto = bs.Id
+                             left join ALM_Defeitos d
+                             on d.subprojeto = dt.Subprojeto and d.entrega = dt.entrega and d.defeito = dt.defeito
+                        Where
+                             be.Id in ('ENTREGA00007456')
+                             and dt.status in ('IN_PROGRESS', 'REOPEN')
+                             --and dt.status in ('IN_PROGRESS', 'PENDENT (PROGRESS)', 'REOPEN', 'REJECTED', 'ON_RETEST')
+                             and ((select Status_Atual from ALM_Defeitos d where d.Subprojeto = dt.Subprojeto and d.Entrega = dt.Entrega and d.Defeito = dt.Defeito) = 'Closed'
+                             or (select Status_Atual from ALM_Defeitos d where d.Subprojeto = dt.Subprojeto and d.Entrega = dt.Entrega and d.Defeito = dt.Defeito) = 'Cancelled')
+                  ) aux1
+            group by
+                  Id_Subprojeto,
+                  Id_Entrega,
+                  Defeito,   
+                  Agente,    
+                  Severidade,
+                  Natureza
+      ) aux2
+      
+      
+      

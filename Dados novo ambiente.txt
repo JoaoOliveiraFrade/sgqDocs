@@ -1,0 +1,17 @@
+HML:
+
+Servidores         : iishw01a e iishw01b
+Servidor de deploy : iishw01a 
+Caminho rede       : \\iishw01b\sgqhml
+Caminho fisico     : E:\Inetpub\webroot\sgqhml
+Link               : http://sgqhml.intranet
+
+PRD:
+Servidores         : iispw02a e iispw02b
+Servidor de deploy : iispw02a 
+Caminho rede       : \\iispw02lb.telemar
+Caminho fisico     : E:\Inetpub\webroot\sgq
+Link               : http://sgq.intranet
+
+Arquivo de host
+C:\Windows\System32\drivers\etc
