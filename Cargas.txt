@@ -1,14 +1,14 @@
 D:\SGQ_QC11_Win_Forms\bin\Release\SGQ_QC11_Win_Forms.exe
 
-D:\dados\sgq\Solucao\SGQ_ALM_Projetos_Console\bin\Release\SGQ_ALM_Projetos_Console.exe
+D:\sgq\Solucao\SGQ_ALM_Projetos_Console\bin\Release\SGQ_ALM_Projetos_Console.exe
 
-D:\dados\sgq\Solucao\SGQ_ALM_Defeitos\bin\Release\SGQ_ALM_Defeitos.exe
+D:\sgq\Solucao\SGQ_ALM_Defeitos\bin\Release\SGQ_ALM_Defeitos.exe
 
-D:\dados\sgq\Solucao\SGQ_Final_Dia_Console\bin\Release\SGQ_Final_Dia_Console.exe -r
+D:\sgq\Solucao\SGQ_Final_Dia_Console\bin\Release\SGQ_Final_Dia_Console.exe -r
 
-D:\dados\sgq\Solucao\BITI_Console\bin\Release\BITI_Console.exe -r
+D:\sgq\Solucao\BITI_Console\bin\Release\BITI_Console.exe -r
 
-D:\dados\sgq\Solucao\SGQ_ALM_Carga_Completa_CTs\bin\Release\SGQ_ALM_Carga_Completa_CTs.exe -r
+D:\sgq\Solucao\SGQ_ALM_Carga_Completa_CTs\bin\Release\SGQ_ALM_Carga_Completa_CTs.exe -r
 
 
 D:\SGQ_\Solucao\SGQ_ALM_Projetos_Console\bin\Release\SGQ_ALM_Projetos_Console.exe
@@ -36,7 +36,7 @@ Telefone: (33) 3351-3400
 =======================
 
 
-D:\dados\sgq\loaders\SGQ_ALM_Projetos_Console\bin\Release\SGQ_ALM_Projetos_Console.exe -RunAtNight
+D:\sgq\loaders\SGQ_ALM_Projetos_Console\bin\Release\SGQ_ALM_Projetos_Console.exe -RunAtNight
 
 
 
