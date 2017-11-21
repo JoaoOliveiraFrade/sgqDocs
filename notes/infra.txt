@@ -1,5 +1,27 @@
-﻿Usuário de Serviço do Remedy, usado para acessar o SGQ:
-?rea: Transicao Para Producao, Paulo Spirlandelli
+﻿Servidores do SGQ
+=========================================================
+HML:
+Servidores         : iishw01a e iishw01b
+Servidor de deploy : iishw01a 
+Caminho rede       : \\iishw01b\sgqhml
+Caminho fisico     : E:\Inetpub\webroot\sgqhml
+Link               : http://sgqhml.intranet
+
+PRD:
+Servidores         : iispw02a e iispw02b
+Servidor de deploy : iispw02a 
+Caminho rede       : \\iispw02lb.telemar
+Caminho fisico     : E:\Inetpub\webroot\sgq
+Link               : http://sgq.intranet
+
+
+Caminho do Arquivo de host
+=========================================================
+C:\Windows\System32\drivers\etc
+
+
+Usuário de Serviço do Remedy, usado para acessar o SGQ:
+Área: Transicao Para Producao, Paulo Spirlandelli
 =========================================================
 login: SV011232
 Senha: SV#011oi232#
