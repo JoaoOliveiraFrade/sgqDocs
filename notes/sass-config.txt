@@ -1,0 +1,16 @@
+Problema na instalação do node-sass:
+=========================================================
+ - Download the binary file and put into temp directory
+ - set SASS_BINARY_PATH=C:\temp\win32-x64-48_binding.node
+   set SASS_BINARY_PATH=C:\temp\win32-x64-51_binding.node
+   set SASS_BINARY_PATH=C:\temp\win32-x64-59_binding.node
+
+
+instalação libs sass
+=========================================================
+npm install node-sass --save-dev
+npm i sass-loader --save-dev
+npm i bootstrap-sass --save
+
+
+

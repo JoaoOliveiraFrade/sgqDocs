@@ -1,0 +1,8 @@
+informar token: https://passaporteoi.oi.net.br
+
+login: 		https://oivpn.oi.net.br
+
+proxy script: 	http://proxy.telemar:8350/web.pac
+
+ip workstation:	10.35.82.106
+ 

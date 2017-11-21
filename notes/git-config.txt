@@ -1,0 +1,8 @@
+git config --global --get http.proxy
+git config --global --unset http.proxy
+git config --global http.proxy http://oi12949:DAN9Joao@10.32.150.40:82
+
+git config --global user.email "joao.o.frade@gmail.com"
+git config --global user.name "João de Oliveira Frade"
+
+

@@ -1,0 +1,33 @@
+git init
+git add .
+git reset HEAD filename (para remover arquivo adicionado a staged ?rea)
+
+git rm filename (quando se remove um arquivo na work area, ele n?o ? removido na staged. use este comando para isto)
+
+git commit -m "init"
+git commit --amend -m "init - edi??o" (altera um commit j? realizado)
+
+git diff (diferen?as dos aquivos no diretorio de trabalho)
+git diff --staged (diferen?as dos aquivos na staged ?rea)
+
+git log (historico de commits)
+git log --pretty=oneline (historico de commits, com somente resumo)
+git log -p (historico de commits com diff)
+git log -p -1 (historico de commits com diff do ultimo commit)
+gitk (interface gr?fica com report dos logs)
+
+git checkout -- filename (desfaz todas as altera??es realizadas no filename da work area, copia da staged para a work area)
+
+-------------------------
+git branch cpuxada) (cria o branch cpuxada) 
+git branch (lista os branch existentes)
+git checkout cpuxada) ( altera o branch)
+git add, commit, .... (durante a manuten??o do branch, pode-se voltar ao branch master e fazer algum acerto a vers?o que esta implantada em produ??o)
+
+ao final do desenvolvimento do branch:
+git checkout master
+git merge cpuxada) (deve-se esta no branch de destino e o parametro ? o branch de origem)
+
+git branch -d cpuxada (delete o branch)
+
+git checkout -b teste2 (cria e seleciona o branch teste2)

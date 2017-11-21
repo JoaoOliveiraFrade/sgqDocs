@@ -1,0 +1,18 @@
+Para usar mapState e mapActions tem que importar:
+=========================================================
+npm i babel-plugin-transform-object-rest-spread --save-dev
+
+
+action and state com novo nome:
+=========================================================
+...mapActions({'loadRateEvidRejected': 'indicatorRateEvidRejected/load'})
+...mapState('indicatorRateDefectUnfounded', { loadingRateDefectUnfounded: state => (state.loading) })
+
+
+Criar projeto
+=========================================================
+cd pasta
+vue init webpack
+
+
+
