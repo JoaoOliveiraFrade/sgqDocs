@@ -1,42 +1,19 @@
-﻿HML:
-
-Servidores         : iishw01a e iishw01b
-Servidor de deploy : iishw01a 
-Caminho rede       : \\iishw01b\sgqhml
-Caminho fisico     : E:\Inetpub\webroot\sgqhml
-Link               : http://sgqhml.intranet
-
-PRD:
-Servidores         : iispw02a e iispw02b
-Servidor de deploy : iispw02a 
-Caminho rede       : \\iispw02lb.telemar
-Caminho fisico     : E:\Inetpub\webroot\sgq
-Link               : http://sgq.intranet
-
-Arquivo de host
-C:\Windows\System32\drivers\etc
-
-
-
-
-
-
-Servidor de BD QC11 HML
+﻿Servidor de BD QC11 HML
 =========================================================
 servidor: btdf5215.brasiltelecom.com.br
 porta:    1525
 user:     QC11HML1
 pass:     tstqc11
-SID:      QC11HML1
+sid:      QC11HML1
+
 
 Servidor de BD QC11 PRD
 =========================================================
-servidor: btdf5377
+servidor: btdf5377.brasiltelecom.com.br
 porta:    1530
 user:     SDGM6001
 pass:     t1l1m5r#
-SID:      QC11PRD1
-
+sid:      QC11PRD1
 
 
 ALM 11
@@ -47,12 +24,14 @@ Senha antiga: t1l1m5r#
 Usuário novo: SDGM6001 
 Senha nova: jfrade#171
 
+
 Servidores web produção do SGQ
 =========================================================
 IISPW02A.OI.CORP.NET 
 IISPW02B.OI.CORP.NET
 IISPW02C.OI.CORP.NET
 IISPW02D.OI.CORP.NET
+
 
 ALM12
 =========================================================
