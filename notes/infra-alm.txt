@@ -1,0 +1,71 @@
+﻿Servidor de BD QC11 HML
+=========================================================
+servidor: btdf5215.brasiltelecom.com.br
+porta:    1525
+user:     QC11HML1
+pass:     tstqc11
+sid:      QC11HML1
+
+
+Servidor de BD QC11 PRD
+=========================================================
+servidor: btdf5377.brasiltelecom.com.br
+porta:    1530
+user:     SDGM6001
+pass:     t1l1m5r#
+sid:      QC11PRD1
+
+
+ALM 11
+=========================================================
+Usuário antigo: OI273945 
+Senha antiga: t1l1m5r#
+
+Usuário novo: SDGM6001 
+Senha nova: jfrade#171
+
+
+Servidores web produção do SGQ
+=========================================================
+IISPW02A.OI.CORP.NET 
+IISPW02B.OI.CORP.NET
+IISPW02C.OI.CORP.NET
+IISPW02D.OI.CORP.NET
+
+
+ALM12
+=========================================================
+IP do Banco : 10.61.195.118 ou orahx04-scan.interno
+Porta: 1549 ou 1561
+ 
+Banco : qc12hml-h1
+banco: QC12HML
+Usuário : QCALM11
+Senha : tdtdtd
+
+
+SERVIDOR
+Versão do Windows Server 2008 R2 Enterprise
+Processador : CPU E52690 @ 2.90GHz(4 Processors)
+Memória Instalada: 16 GB
+Hostname : BTDF3018
+64 Bits
+
+LINKS
+URL genérica para acesso ao Ambiente : http://btdf3018:8080/qcbin/
+Aplicação: http://btdf3018:8080/qcbin/start_a.jsp
+Administração: http://btdf3018:8080/qcbin/SiteAdmin.jsp
+Informações do Ambiente Detalhadas : http://btdf3018:8080/qcbin/debug/
+
+ACESSO
+Login de rede OI (Autenticação automática LDAP)
+
+LOGS
+C:\ProgramData\HP\ALM\log\qc
+Logs da Admnistração :
+C:\ProgramData\HP\ALM\log\sa
+
+REPOSITORIO DE PROJETOS
+E:\ProgramData\HP\ALM\repository
+
+Qualquer dúvida entre em contato.
