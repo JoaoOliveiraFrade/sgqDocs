@@ -1,0 +1,25 @@
+<!DOCYPE html>
+<html>
+  <head>
+    <title>Canvas na seção HEAD</title>
+
+    <script>
+      windows.onload = function () {
+        let canvas = document.getElementById('myCanvas')
+        let context = canvas.getContext('2d')
+        let x = 50
+        let y = 50
+        let width = 100
+        let height = 100
+        context.fillRect(x, y, width, height)
+        context.strokeRect(x, y, width, height)
+      }
+    </script>
+
+  </head>
+
+  <body>
+    <canvas id="myCanvas" width="200" height=200>
+    </canvas>
+  </body>
+</html>

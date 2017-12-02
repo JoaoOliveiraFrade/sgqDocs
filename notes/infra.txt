@@ -1,4 +1,6 @@
-﻿Servidores do SGQ
+﻿(localdb)\MSSQLLocalDB
+
+Servidores do SGQ
 =========================================================
 HML:
 Servidores         : iishw01a e iishw01b
