@@ -1,43 +1,18 @@
+BITI: 
+  D:\sgq\Solucao\BITI_Console\bin\Release\BITI_Console.exe
+
+LOADER: 
+  D:\sgq\loader\SGQ_ALM_Projetos_Console\bin\Release\SGQ_ALM_Projetos_Console.exe
+
 D:\SGQ_QC11_Win_Forms\bin\Release\SGQ_QC11_Win_Forms.exe
-
 D:\sgq\Solucao\SGQ_ALM_Projetos_Console\bin\Release\SGQ_ALM_Projetos_Console.exe
-
 D:\sgq\Solucao\SGQ_ALM_Defeitos\bin\Release\SGQ_ALM_Defeitos.exe
-
 D:\sgq\Solucao\SGQ_Final_Dia_Console\bin\Release\SGQ_Final_Dia_Console.exe -r
-
-D:\sgq\Solucao\BITI_Console\bin\Release\BITI_Console.exe -r
-
 D:\sgq\Solucao\SGQ_ALM_Carga_Completa_CTs\bin\Release\SGQ_ALM_Carga_Completa_CTs.exe -r
-
-
 D:\SGQ_\Solucao\SGQ_ALM_Projetos_Console\bin\Release\SGQ_ALM_Projetos_Console.exe
-
 D:\SGQ_\Solucao\SGQ_ALM_Defeitos\bin\Release\SGQ_ALM_Defeitos.exe
-
 D:\SGQ_\Solucao\SGQ_Final_Dia_Console\bin\Release\SGQ_Final_Dia_Console.exe -r
-
 D:\SGQ_\Solucao\BITI_Console\bin\Release\BITI_Console.exe -r
 
-
 D:\SGQ_\Solucao\SGQ_ALM_Carga_Completa_CTs\bin\Release\SGQ_ALM_Carga_Completa_CTs.exe -r
-
-
-
-Francilane Basso
-33 33512193
-Francilane Basso, professora, Rua São Sebastião, 200, Raul Soares
-
-
-Cesec Récio de Souza Ribeiro
-Endereço: Rua Benjamin do Carmo, 13 - Centro, Raul Soares - MG, 35350-000
-Telefone: (33) 3351-3400
-
-=======================
-
-
 D:\sgq\loaders\SGQ_ALM_Projetos_Console\bin\Release\SGQ_ALM_Projetos_Console.exe -RunAtNight
-
-
-
-
