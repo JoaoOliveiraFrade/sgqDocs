@@ -1,0 +1,14 @@
+instalar VMwareTools do menu
+=====================================================
+
+* para instalação a partir do VMware:
+tar -xvf /media/$USER/"VMware Tools"/VMwareTools*.gz -C /tmp
+sudo /tmp/vmware-tools-distrib/vmware-install.pl -d
+
+* para instalação de pacotes do ubuntu
+sudo apt install open-vm-tools open-vm-tools-desktop
+
+* update
+sudo apt-get update && sudo apt-get upgrade
+sudo apt install ubuntu-restricted-extras
+sudo apt-get update && sudo apt-get upgrade
