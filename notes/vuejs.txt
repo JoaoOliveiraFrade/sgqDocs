@@ -15,4 +15,8 @@ cd pasta
 vue init webpack
 
 
-
+Editores WYSIWYG
+=========================================================
+Quill WYSIWYG editor (vue-quill-editor) (sem table)
+hifarer/vueditor
+vue-html5-editor

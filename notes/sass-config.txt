@@ -11,6 +11,3 @@ instalação libs sass
 npm install node-sass --save-dev
 npm i sass-loader --save-dev
 npm i bootstrap-sass --save
-
-
-

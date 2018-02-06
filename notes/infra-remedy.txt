@@ -1,0 +1,7 @@
+﻿servidor: SQLPW04DB04,1443
+user: SDGM6001
+senha: Aj6cE3Gm
+
+servidor: SQLPW04DB04,1443
+user: UsrBDIndicadoresReport
+senha: 1ndicador3s.r3port 

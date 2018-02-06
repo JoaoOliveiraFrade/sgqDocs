@@ -2,7 +2,7 @@ BITI:
   D:\sgq\Solucao\BITI_Console\bin\Release\BITI_Console.exe
 
 LOADER: 
-  D:\sgq\loader\SGQ_ALM_Projetos_Console\bin\Release\SGQ_ALM_Projetos_Console.exe
+  D:\sgq\loader__\SGQ_ALM_Projetos_Console\bin\Release\SGQ_ALM_Projetos_Console.exe
 
 D:\SGQ_QC11_Win_Forms\bin\Release\SGQ_QC11_Win_Forms.exe
 D:\sgq\Solucao\SGQ_ALM_Projetos_Console\bin\Release\SGQ_ALM_Projetos_Console.exe
