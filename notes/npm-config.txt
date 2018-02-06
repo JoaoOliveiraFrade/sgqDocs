@@ -1,8 +1,13 @@
 npm config rm proxy
 npm config rm https-proxy
 
+MG
 npm config set proxy http://oi12949:DAN9Joao@10.32.150.40:82
 npm config set https-proxy http://oi12949:DAN9Joao@10.32.150.40:82
+
+RJ
+npm config set proxy http://oi12949:DAN9Joao@10.21.7.10:82
+npm config set https-proxy http://oi12949:DAN9Joao@10.21.7.10:82
 
 npm cache clean --force
 

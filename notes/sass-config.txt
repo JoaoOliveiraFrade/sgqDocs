@@ -1,4 +1,4 @@
-Problema na instala��o do node-sass:
+Problema na instalação do node-sass:
 =========================================================
  - Download the binary file and put into temp directory
  - set SASS_BINARY_PATH=C:\temp\win32-x64-48_binding.node
