@@ -1,0 +1,17 @@
+<add 
+name="connectionStringSgq" 
+
+connectionString="
+
+Data Source=SQLPRD071\dbinst1,1440;
+Initial Catalog=BDGestaoTestes;
+Persist Security Info=True;
+User ID=SGTBD0;
+Password=GT_prd@teste;
+Connect Timeout=600;
+Max Pool Size=150;
+Min Pool Size=50;
+
+" 
+
+providerName="System.Data.SqlClient" />

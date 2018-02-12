@@ -1,0 +1,17 @@
+USE master
+GO
+
+/* Criando o Linked Server */
+EXEC master.dbo.sp_addlinkedserver
+@server = N'TESTE_SVR4', -- Nome do Linked
+@srvproduct=N'testeLinkedServer',  -- Descrição
+@provider=N'SQLNCLI11', -- Provider para SQL Server Native Client 10.0
+@datasrc=N'SQLPRD071\dbinst1,1440' -- Caminho do banco, ou no caso, IP do Servidor
+
+/* Criando o login de acesso do Linked Server*/
+EXEC master.dbo.sp_addlinkedsrvlogin
+@rmtsrvname=N'TESTE_SVR4', -- Nome criado do Linked
+@useself=N'False', -- Se outros usuários usarão
+@locallogin=N'TELEMAR\R18838', -- Usuário do banco local que terá acesso
+@rmtuser=N'SGTBD0', -- login do banco do outro servidor
+@rmtpassword='GT_prd@teste' -- senha do banco do outro servidor

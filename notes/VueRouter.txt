@@ -1,0 +1,57 @@
+Vue.use(VueResource)
+Vue.use(VueRouter)
+
+const router = new VueRouter()
+
+router.map({
+  '/': {
+    name: 'dashboard',
+    component: comp1
+  },
+
+  '/usuarios': {
+    component: comp2,
+    subRouters: {
+      '/novo': {
+        name: 'users.new',
+        component: comp3
+      }
+    }
+  }
+})
+
+
+incluir um <router-view/> dentro de "comp2"
+
+links no menu:
+
+<a v-link="'/'">opção1 </a>
+<a v-link="'/usuarios'">opção2 </a>
+
+ou
+
+<a v-link="{ path: '/' }">opção1 </a>
+<a v-link="{ path: '/usuarios' }">opção2 </a>
+
+ou
+
+<a v-link="{ name: 'dashboard' }">opção1 </a>
+<a v-link="{ name: 'users' }">opção2 </a>
+
+
+<button @click="$router.go({ name: 'users.new' })">
+  Novo
+</button>
+
+
+<button @click="$router.go({ name: 'users' })">
+  Voltar
+</button>
+
+
+Tira caracteres "#!":
+
+const router = new VueRouter({
+  hashbang: false,
+  history: true
+})

@@ -1,0 +1,117 @@
+Config proxy npm
+=========================================================
+npm config set proxy http://oi12949:DaniJOA7@10.32.150.40:82
+npm config set https-proxy http://oi12949:DaniJOA7@10.32.150.40:82
+
+npm config delete proxy
+npm config delete https-proxy
+
+npm config set <key> <value> [-g|--global]
+npm config get <key>
+npm config delete <key>
+npm config list [-l]
+npm config edit
+npm get <key>
+npm set <key> <value> [-g|--global]
+
+
+Config proxy GITHUB
+=========================================================
+git config --global --get http.proxy
+git config --global --unset http.proxy
+git config --global http.proxy http://oi12949:DaniJOA7@10.32.150.40:82
+
+URL do repositório: https://github.com/joao-o-frade/sgqWeb.git
+
+git config --global http.proxy  http://oi12949:DaniJOA7@10.32.150.40:82
+
+git clone https://github.com/joao-o-frade/sgqWebApi.git webApi
+
+
+Criar projeto
+=========================================================
+cd pasta
+vue init webpack
+
+
+Limpar cache
+=========================================================
+npm cache clean && npm install node-sass
+
+
+Comandos do GIT
+=========================================================
+git init
+git add .
+git reset HEAD filename (para remover arquivo adicionado a staged área)
+
+git rm filename (quando se remove um arquivo na work area, ele não é removido na staged. use este comando para isto)
+
+git commit -m "init"
+git commit --amend -m "init - edição" (altera um commit já realizado)
+git commit --amend -m "test indicators review"
+
+git diff (diferenças dos aquivos no diretorio de trabalho)
+git diff --staged (diferenças dos aquivos na staged área)
+
+git log (historico de commits)
+git log --pretty=oneline (historico de commits, com somente resumo)
+git log -p (historico de commits com diff)
+git log -p -1 (historico de commits com diff do ultimo commit)
+gitk (interface gráfica com report dos logs)
+
+git checkout -- filename (desfaz todas as alterações realizadas no filename da work area, copia da staged para a work area)
+
+-------------------------
+git branch cpuxada) (cria o branch cpuxada) 
+git branch (lista os branch existentes)
+git checkout cpuxada) ( altera o branch)
+git add, commit, .... (durante a manutenção do branch, pode-se voltar ao branch master e fazer algum acerto a versão que esta implantada em produção)
+
+ao final do desenvolvimento do branch:
+git checkout master
+git merge cpuxada) (deve-se esta no branch de destino e o parametro é o branch de origem)
+
+git branch -d cpuxada (delete o branch)
+
+git checkout -b teste2 (cria e seleciona o branch teste2)
+----------------
+
+
+
+
+
+
+instalação libs sass
+=========================================================
+npm i bootstrap-sass --save
+npm i sass-loader node-sass --save-dev
+
+
+Problema na instalação do node-sass:
+=========================================================
+ - Download the binary file and put into temp directory
+ - SET SASS_BINARY_PATH=C:/temp/win32-x64-51_binding.node
+ - npm install node-sass
+
+
+Para usar mapState e mapActions tem que importar:
+=========================================================
+npm i babel-plugin-transform-object-rest-spread --save-dev
+
+
+
+
+Usuário de Serviço do Remedy, usado para acessar o SGQ:
+=========================================================
+login: SV011232
+Senha: SV#011oi232#
+
+Usuário de Serviço do SGQ, usado para consultar o banco:
+=========================================================
+login: SDGM6001
+Senha: Aj6cE3Gm
+
+Highchart 
+-version ok: 5.0.3
+-last version: 5.0.14
